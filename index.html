@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>山月札记 | 个人博客</title>
+    <meta
+      name="description"
+      content="一个安静、清晰、可阅读的个人博客，记录技术、生活与长期思考。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="read-progress" id="readProgress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark">山</span>
+        <span>山月札记</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#posts">文章</a>
+        <a href="#archive">归档</a>
+        <a href="#about">关于</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅色主题" title="切换主题">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal Blog</p>
+          <h1>把日常里的灵光，整理成可以再次抵达的文字。</h1>
+          <p class="hero-text">
+            这里记录工程实践、阅读笔记、城市漫游和一些慢慢成形的想法。写给未来的自己，也写给偶然路过的人。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#posts">开始阅读</a>
+            <a class="button ghost" href="#about">认识作者</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/hero-desk.png" alt="晨光下的书桌、笔记本、钢笔和电脑" />
+        </figure>
+      </section>
+
+      <section class="section intro-strip" aria-label="博客概览">
+        <div>
+          <strong>6</strong>
+          <span>篇公开笔记</span>
+        </div>
+        <div>
+          <strong>4</strong>
+          <span>个长期主题</span>
+        </div>
+        <div>
+          <strong>周更</strong>
+          <span>保持一点节奏</span>
+        </div>
+      </section>
+
+      <section class="section posts-section" id="posts">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest Essays</p>
+            <h2>最近文章</h2>
+          </div>
+          <label class="search-box">
+            <span class="visually-hidden">搜索文章</span>
+            <input id="searchInput" type="search" placeholder="搜索标题、摘要或标签" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="featured-wrap" id="featuredWrap" aria-label="精选文章"></div>
+
+        <div class="filters" id="categoryFilters" aria-label="文章分类"></div>
+        <div class="post-grid" id="postGrid"></div>
+      </section>
+
+      <section class="section reader-section" id="reader" hidden>
+        <article class="reader" aria-live="polite">
+          <button class="text-button" id="closeReader" type="button">返回文章列表</button>
+          <p class="eyebrow" id="readerMeta"></p>
+          <h2 id="readerTitle"></h2>
+          <div class="reader-tags" id="readerTags"></div>
+          <div class="reader-content" id="readerContent"></div>
+          <div class="reader-related" id="readerRelated" aria-label="相关文章"></div>
+        </article>
+      </section>
+
+      <section class="section archive-section" id="archive">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Archive</p>
+            <h2>归档</h2>
+          </div>
+        </div>
+        <div class="archive-list" id="archiveList"></div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>你好，我是这个博客的作者。</h2>
+          <p>
+            我喜欢把复杂问题拆开，把朴素经验写清楚。这个博客适合放技术复盘、阅读摘录、旅行记录，以及那些不急着得出结论的观察。
+          </p>
+        </div>
+        <div class="about-panel">
+          <h3>常写主题</h3>
+          <ul>
+            <li>前端工程与产品体验</li>
+            <li>读书、写作和知识管理</li>
+            <li>城市、咖啡馆和散步路线</li>
+            <li>工具、效率与长期主义</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 山月札记</span>
+      <span>愿每一次记录，都让生活更清楚一点。</span>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="返回顶部" hidden>↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
